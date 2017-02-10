@@ -2,15 +2,37 @@ package cn.true123.lambda;
 
 public class Person {
 
-	private String name;
 	private int age;
 
-	public String getName() {
-		return name;
+	private String firstName;
+	private String lastName;
+
+	@Override
+	public String toString() {
+		return "Person [age=" + age + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public Person(int age, String firstName, String lastName) {
+		super();
+		this.age = age;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public int getAge() {
@@ -21,19 +43,8 @@ public class Person {
 		this.age = age;
 	}
 
-	public Person(String name, int age) {
-		super();
-		this.name = name;
-		this.age = age;
-	}
-
 	public Person() {
 		super();
-	}
-
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", age=" + age + "]";
 	}
 
 }
